@@ -317,7 +317,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8080))
-    server = http.server.HTTPServer(('localhost', port), Handler)
+    server = http.server.HTTPServer(('0.0.0.0', port), Handler)
     print(f'✅ OFT ビューワー起動中')
     print(f'👉 ブラウザで開く: http://localhost:{port}')
     print(f'   終了するには Ctrl+C')
